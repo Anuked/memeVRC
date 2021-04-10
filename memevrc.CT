@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="31">
+  <CheatEntries>
+    <CheatEntry>
+      <ID>0</ID>
+      <Description>"emmvrc bypass"</Description>
+      <LastState/>
+      <VariableType>Auto Assembler Script</VariableType>
+      <AssemblerScript>[ENABLE]
+aobscan(aob_risky,48B8xxxxxxxxxxxxxxxx488Bxxxxxx488Dxxxxxx49BBxxxxxxxxxxxxxxxx41FFxxxxxx0F84xxxxxxxx48B8xxxxxxxxxxxxxxxx488B)
+registersymbol(aob_risky)
+
+(qword)[aob_risky+2]-10:
+db 01 00
+
+[DISABLE]
+(qword)[aob_risky+2]-10:
+db 00 00
+</AssemblerScript>
+    </CheatEntry>
+  </CheatEntries>
+  <UserdefinedSymbols/>
+</CheatTable>
